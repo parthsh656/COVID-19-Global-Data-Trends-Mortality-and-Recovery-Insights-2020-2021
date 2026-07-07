@@ -1,0 +1,16 @@
+Methodology:
+
+1.Data Preprocessing
+
+- Converted wide-format datasets into long format using melt()
+- Standardized inconsistent date formats (mixed MM/DD/YY, DD/MM/YYYY, ISO)
+- Handled missing values using forward fill and logical imputation
+
+2.Feature Engineering
+
+- Converted cumulative data → daily values using differencing
+- Handled negative corrections using clipping and cummax()
+- Created monthly aggregates for trend analysis
+- Derived key metrics:
+  - Death Rate(Deaths / Confirmed)
+  - Recovery Ratio(Recovered / Confirmed)
